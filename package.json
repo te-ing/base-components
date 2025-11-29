@@ -1,0 +1,42 @@
+{
+  "name": "base-components-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo for base components and documentation",
+  "scripts": {
+    "dev": "pnpm --filter documentation-site dev",
+    "dev:components": "pnpm --filter base-components dev",
+    "build": "pnpm -r build",
+    "build:components": "pnpm --filter base-components build",
+    "build:docs": "pnpm --filter documentation-site build",
+    "type-check": "pnpm -r type-check",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "format": "prettier --write \"**/*.{ts,tsx,json,md,scss}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,json,md,scss}\"",
+    "clean": "pnpm -r clean"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@typescript-eslint/eslint-plugin": "^8.18.1",
+    "@typescript-eslint/parser": "^8.18.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.16.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "prettier": "^3.4.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sass": "^1.81.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.1",
+    "vite-plugin-dts": "^4.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.0"
+}

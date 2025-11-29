@@ -1,0 +1,15 @@
+.app {
+  min-height: 100vh;
+
+  &__header {
+    padding: 2rem;
+    background-color: #1a1a1a;
+    color: white;
+  }
+
+  &__main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
