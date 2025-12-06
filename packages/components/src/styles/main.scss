@@ -1,0 +1,16 @@
+@use 'reset';
+@use 'variables';
+
+:root {
+  font-family: variables.$font-family-sans;
+  font-size: variables.$font-size-base;
+  line-height: variables.$line-height-normal;
+  color: variables.$color-text-primary;
+  background-color: variables.$color-background;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+

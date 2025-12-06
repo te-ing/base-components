@@ -1,0 +1,38 @@
+.storybookHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: $border-width-1 solid $color-border;
+  padding: $spacing-4 $spacing-5;
+  font-family: $font-family-sans;
+
+  svg {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  h1 {
+    display: inline-block;
+    vertical-align: top;
+    margin: $spacing-2 0 $spacing-2 $spacing-3;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-xl;
+    line-height: $line-height-none;
+    color: $color-text-primary;
+  }
+
+  button + button {
+    margin-left: $spacing-3;
+  }
+
+  .welcome {
+    margin-right: $spacing-3;
+    color: $color-text-primary;
+    font-size: $font-size-sm;
+  }
+
+  @include respond-to(md) {
+    padding: $spacing-4 $spacing-6;
+  }
+}
+
