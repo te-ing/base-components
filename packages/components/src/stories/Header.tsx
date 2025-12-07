@@ -1,4 +1,4 @@
-import { Button } from './Button';
+import { Button } from '../actions/button/Button';
 import styles from './header.module.scss';
 
 type User = {

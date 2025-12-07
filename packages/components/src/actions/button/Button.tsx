@@ -1,5 +1,5 @@
 import cx from 'clsx';
-import styles from './button.module.scss';
+import styles from './Button.module.scss';
 
 export interface ButtonProps {
   variant?: 'primary' | 'secondary';
@@ -17,11 +17,7 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   return (
-    <button
-      type="button"
-      className={cx(styles.button, styles[variant], styles[size])}
-      {...props}
-    >
+    <button type="button" className={cx(styles.button, styles[variant], styles[size])} {...props}>
       {label || children}
     </button>
   );
