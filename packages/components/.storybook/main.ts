@@ -20,6 +20,7 @@ const config: StorybookConfig = {
   "framework": "@storybook/react-vite",
   async viteFinal(config) {
     return mergeConfig(config, {
+      base: process.env.NODE_ENV === 'production' ? '/base-components/' : '/',
       css: {
         modules: {
           localsConvention: 'camelCase',

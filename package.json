@@ -8,6 +8,8 @@
     "build": "pnpm -r build",
     "build:components": "pnpm --filter components build",
     "build:docs": "pnpm --filter documentation-site build",
+    "storybook": "pnpm --filter components storybook",
+    "build-storybook": "pnpm --filter components build-storybook",
     "type-check": "pnpm -r type-check",
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
