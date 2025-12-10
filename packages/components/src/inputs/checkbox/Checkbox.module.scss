@@ -1,119 +1,121 @@
 @use "../../styles/variables" as *;
 
-.checkboxWrapper {
-  display: inline-flex;
-  align-items: center;
-  gap: $spacing-2;
-  cursor: pointer;
-  user-select: none;
+@layer components {
+  .checkboxWrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-2;
+    cursor: pointer;
+    user-select: none;
 
-  &.disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-}
-
-.checkbox {
-  cursor: pointer;
-  border: $border-width-2 solid $color-border;
-  border-radius: $border-radius-sm;
-  appearance: none;
-  background-color: $color-background;
-  transition: $transition-base;
-  position: relative;
-  flex-shrink: 0;
-
-  &:hover:not(:disabled) {
-    border-color: $color-primary-600;
+    &.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
   }
 
-  &:checked {
-    background-color: $color-primary-600;
-    border-color: $color-primary-600;
-  }
-
-  &:focus-visible {
-    outline: 2px solid $color-primary-600;
-    outline-offset: 2px;
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-  }
-}
-
-.label {
-  font-family: $font-family-sans;
-  color: $color-text-primary;
-  line-height: $line-height-normal;
-}
-
-// Size variants
-.sm {
   .checkbox {
-    width: 14px;
-    height: 14px;
+    cursor: pointer;
+    border: $border-width-2 solid $color-border;
+    border-radius: $border-radius-sm;
+    appearance: none;
+    background-color: $color-background;
+    transition: $transition-base;
+    position: relative;
+    flex-shrink: 0;
 
-    &:checked::after {
-      content: "";
-      position: absolute;
-      left: 3px;
-      top: 1px;
-      width: 3px;
-      height: 6px;
-      border: solid white;
-      border-width: 0 1.5px 1.5px 0;
-      transform: rotate(45deg);
+    &:hover:not(:disabled) {
+      border-color: $color-primary-600;
+    }
+
+    &:checked {
+      background-color: $color-primary-600;
+      border-color: $color-primary-600;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-primary-600;
+      outline-offset: 2px;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
     }
   }
 
   .label {
-    font-size: $font-size-xs;
+    font-family: $font-family-sans;
+    color: $color-text-primary;
+    line-height: $line-height-normal;
   }
-}
 
-.md {
-  .checkbox {
-    width: 18px;
-    height: 18px;
+  // Size variants
+  .sm {
+    .checkbox {
+      width: 14px;
+      height: 14px;
 
-    &:checked::after {
-      content: "";
-      position: absolute;
-      left: 4px;
-      top: 1px;
-      width: 4px;
-      height: 8px;
-      border: solid white;
-      border-width: 0 2px 2px 0;
-      transform: rotate(45deg);
+      &:checked::after {
+        content: "";
+        position: absolute;
+        left: 3px;
+        top: 1px;
+        width: 3px;
+        height: 6px;
+        border: solid white;
+        border-width: 0 1.5px 1.5px 0;
+        transform: rotate(45deg);
+      }
+    }
+
+    .label {
+      font-size: $font-size-xs;
     }
   }
 
-  .label {
-    font-size: $font-size-sm;
-  }
-}
+  .md {
+    .checkbox {
+      width: 18px;
+      height: 18px;
 
-.lg {
-  .checkbox {
-    width: 22px;
-    height: 22px;
+      &:checked::after {
+        content: "";
+        position: absolute;
+        left: 4px;
+        top: 1px;
+        width: 4px;
+        height: 8px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
 
-    &:checked::after {
-      content: "";
-      position: absolute;
-      left: 6px;
-      top: 1px;
-      width: 5px;
-      height: 10px;
-      border: solid white;
-      border-width: 0 2.5px 2.5px 0;
-      transform: rotate(45deg);
+    .label {
+      font-size: $font-size-sm;
     }
   }
 
-  .label {
-    font-size: $font-size-base;
+  .lg {
+    .checkbox {
+      width: 22px;
+      height: 22px;
+
+      &:checked::after {
+        content: "";
+        position: absolute;
+        left: 6px;
+        top: 1px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2.5px 2.5px 0;
+        transform: rotate(45deg);
+      }
+    }
+
+    .label {
+      font-size: $font-size-base;
+    }
   }
 }
