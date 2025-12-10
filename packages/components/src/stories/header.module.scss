@@ -1,3 +1,5 @@
+@use "../styles/variables" as *;
+
 .storybookHeader {
   display: flex;
   justify-content: space-between;
@@ -35,4 +37,3 @@
     padding: $spacing-4 $spacing-6;
   }
 }
-
