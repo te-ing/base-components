@@ -40,23 +40,23 @@ $breakpoint-2xl: 1536px;
 // Max-width Media Query Mixins
 @mixin respond-to-max($breakpoint) {
   @if $breakpoint == xs {
-    @media (max-width: $breakpoint-sm - 1px) {
+    @media (max-width: ($breakpoint-sm - 1px)) {
       @content;
     }
   } @else if $breakpoint == sm {
-    @media (max-width: $breakpoint-md - 1px) {
+    @media (max-width: ($breakpoint-md - 1px)) {
       @content;
     }
   } @else if $breakpoint == md {
-    @media (max-width: $breakpoint-lg - 1px) {
+    @media (max-width: ($breakpoint-lg - 1px)) {
       @content;
     }
   } @else if $breakpoint == lg {
-    @media (max-width: $breakpoint-xl - 1px) {
+    @media (max-width: ($breakpoint-xl - 1px)) {
       @content;
     }
   } @else if $breakpoint == xl {
-    @media (max-width: $breakpoint-2xl - 1px) {
+    @media (max-width: ($breakpoint-2xl - 1px)) {
       @content;
     }
   }
@@ -64,8 +64,7 @@ $breakpoint-2xl: 1536px;
 
 // Range Media Query Mixin
 @mixin respond-to-range($min, $max) {
-  @media (min-width: $min) and (max-width: $max - 1px) {
+  @media (min-width: $min) and (max-width: ($max - 1px)) {
     @content;
   }
 }
-
